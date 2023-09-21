@@ -15,13 +15,21 @@
   border: 1px solid white;
   border-radius: 1rem;
   transition: 0.115s;
+  cursor: pointer;
 }
 
 .card > h2 {
   font-size: 2rem;
+  border-left: 1rem solid #191970;
+  border-right: 1rem solid #191970;
+}
+
+.card > p {
+  border: 0.1rem solid white;
+  background-color: #708090;
 }
 
 .card > img {
   border-radius: 1rem;
-  max-width: 400px;
+  max-width: 300px;
 }
