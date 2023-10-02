@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
 import Tag from "./components/Tag/Tag";
+import Header from "./components/Header/Header";
 
 function App() {
   // const item1 = {
@@ -28,6 +29,7 @@ function App() {
   // const itens = [item1, item2, item3];
 
   const [itens, setItens] = useState([]);
+
   //useState do react traz duas coisas:
   //1. O estado contendo o valor
   //2. A função atualiza o valor do estado
@@ -47,6 +49,7 @@ function App() {
   //1. função contendo o efeito será protegido pelo useEffect
   //2. Dependencias que controlam a executam do useEffect.
   //   Array vazio para executar apenas 1 vez.
+
   useEffect(function () {
     //efeito que será protegido pelo useEffect
     loadDataApi();
@@ -54,6 +57,8 @@ function App() {
 
   return (
     <>
+      <Header />
+
       <div className="card-list">
         {itens.map(function (item, index) {
           return <Card item={item} key={`card_${index}`} />;
